@@ -8,12 +8,6 @@
                     <valueList>
                         <valueListItems>
                             <value>Dog_Fact__c.Assign_Me</value>
-                            <visibilityRule>
-                                <criteria>
-                                    <leftValue>{!Record.Full_Name__c}</leftValue>
-                                    <operator>EQUAL</operator>
-                                </criteria>
-                            </visibilityRule>
                         </valueListItems>
                     </valueList>
                 </componentInstanceProperties>
