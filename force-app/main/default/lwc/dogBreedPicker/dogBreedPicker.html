@@ -1,0 +1,17 @@
+<template>
+    <template lwc:if={isLoading}>
+        <lightning-spinner alternative-text="Loading breeds" size="medium"></lightning-spinner>
+    </template>
+    <template lwc:if={errorMessage}>
+        <p class="slds-text-color_error slds-m-bottom_small">{errorMessage}</p>
+    </template>
+    <template lwc:if={hasBreeds}>
+        <div style="max-height: 400px; overflow-y: auto;">
+            <lightning-datatable key-field="id" data={breeds} columns={columns}
+                max-row-selection="1" onrowselection={handleSelection}></lightning-datatable>
+        </div>
+    </template>
+    <template lwc:elseif={isLoaded}>
+        <p>No unassigned breeds are available.</p>
+    </template>
+</template>
